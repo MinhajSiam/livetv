@@ -6,7 +6,7 @@
         content="Asia Cup 2023 live streaming free, India vs Pakistan vs Bangladesh vs Srilanka vs Nepal, ODI cricket match live, live tv, live sports, live cricket">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="images/asiacup_logo.jpg" type="image/x-icon">
     <title>Asia Cup 2023</title>
     <style>
         .streaming-frame iframe {
@@ -31,7 +31,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            box-shadow: 2px 5px 10px gray;
+            /* box-shadow: 2px 5px 10px gray; */
+            box-shadow: 2px 5px 10px #c1eafa;
             border-radius: 5px;
             transition: scale 0.3s;
         }
@@ -45,6 +46,10 @@
         .card img {
             max-width: 50%;
             text-align: center;
+        }
+
+        .poll-section {
+            margin-top: 50px;
         }
 
         @media screen and (max-width:452px) {
@@ -62,6 +67,15 @@
                 max-height: 80px;
                 min-height: 80px;
             }
+        }
+
+        footer a {
+            color: #5EC3EC;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
         }
     </style>
 </head>
@@ -106,7 +120,17 @@
 
         </section>
 
+        <section class="poll-section">
+            <div class="poll" data-polltype-embed-id=5638 data-polltype-embed-width="100%"
+                data-polltype-embed-height="480px">
+                <script async src="//www.polltype.com/embed.js"></script>
+            </div>
+        </section>
+
     </main>
+    <footer>
+        <p>&copy; 2023 || Developed by <a href="">Minhaj Siam</a></p>
+    </footer>
 </body>
 
 </html>
