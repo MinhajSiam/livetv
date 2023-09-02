@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" title="Coding design">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Asia Cup 2023 Point Table</title>
+    <style>
+        .body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main.table {
+            width: 82vw;
+            backdrop-filter: blur(7px);
+            box-shadow: 0 .4rem .8rem #c1eafa;
+            border-radius: .8rem;
+            overflow: hidden;
+        }
+
+
+        .table__body {
+            width: 95%;
+            max-height: calc(89% - 1.6rem);
+            background-color: #fffb;
+
+            margin: .8rem auto;
+            border-radius: .6rem;
+
+            overflow: auto;
+            overflow: overlay;
+        }
+
+        .table__body::-webkit-scrollbar {
+            width: 0.5rem;
+            height: 0.5rem;
+        }
+
+        .table__body::-webkit-scrollbar-thumb {
+            border-radius: .5rem;
+            background-color: #0004;
+            visibility: hidden;
+        }
+
+        .table__body:hover::-webkit-scrollbar-thumb {
+            visibility: visible;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td img {
+            width: 36px;
+            height: 36px;
+            margin-right: .5rem;
+            border-radius: 10px;
+
+            vertical-align: middle;
+        }
+
+        table,
+        th,
+        td {
+            border-collapse: collapse;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        thead th {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #c1eafa;
+            cursor: pointer;
+            text-transform: capitalize;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: white;
+            text-align: left;
+        }
+
+        .sticky-2 {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #c1eafa10;
+            text-align: left;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #c1eafa50;
+        }
+
+        tbody tr td,
+        tbody tr td p,
+        tbody tr td img {
+            transition: .2s ease-in-out;
+        }
+
+        tbody tr.hide td img {
+            width: 0;
+            height: 0;
+            transition: .2s ease-in-out .5s;
+        }
+
+        @media (max-width: 350px) {
+            main.table {
+                overflow: scroll;
+            }
+        }
+
+        .group-B {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <main class="table">
+            <section class="table__body group-A">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2"> Group A</th>
+                            <th> Match </th>
+                            <th> Won </th>
+                            <th> Lost </th>
+                            <th> Tied </th>
+                            <th> NR </th>
+                            <th> Pts </th>
+                            <th> NRR </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="sticky" colspan="2"> <img src="images/Pakistan.jpg" alt=""> PAK </td>
+                            <td> 1 </td>
+                            <td> 1 </td>
+                            <td> 0 </td>
+                            <td> 0 </td>
+                            <td> 0 </td>
+                            <td> <strong> 2 </strong></td>
+                            <td style="color: green;"> <strong> + 4.760 </strong></td>
+                        </tr>
+                        <tr>
+                            <td class="sticky-2" colspan="2"><img src="images/India.jpg" alt=""> IND </td>
+                            <td> 0 </td>
+                            <td> 0 </td>
+                            <td> 0 </td>
+                            <td> 0 </td>
+                            <td> 0 </td>
+                            <td> <strong> 0 </strong> </td>
+                            <td> <strong> 0.000 </strong> </td>
+                        </tr>
+                        <tr>
+                            <td class="sticky" colspan="2"><img src="images/Nepal.jpg" alt=""> NEP </td>
+                            <td> 1 </td>
+                            <td> 0 </td>
+                            <td> 1 </td>
+                            <td> 0 </td>
+                            <td> 0 </td>
+                            <td> <strong> 0 </strong> </td>
+                            <td style="color: red;"> <strong> - 4.760 </strong> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="table__body group-B">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2"> Group B</th>
+                            <th> Match </th>
+                            <th> Won </th>
+                            <th> Lost </th>
+                            <th> Tied </th>
+                            <th> NR </th>
+                            <th> Pts </th>
+                            <th> NRR </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="sticky" colspan="2"> <img src="images/Sri lanka.jpg" alt=""> SL </td>
+                            <td> 1 </td>
+                            <td> 1 </td>
+                            <td> 0 </td>
+                            <td> 0 </td>
+                            <td> 0 </td>
+                            <td> <strong> 2 </strong></td>
+                            <td style="color: green;"> <strong> + 0.951 </strong></td>
+                        </tr>
+                        <tr>
+                            <td class="sticky-2" colspan="2"><img src="images/Afghanistan.png" alt=""> AFG </td>
+                            <td> 0 </td>
+                            <td> 0 </td>
+                            <td> 0 </td>
+                            <td> 0 </td>
+                            <td> 0 </td>
+                            <td> <strong> 0 </strong> </td>
+                            <td> <strong> 0.000 </strong> </td>
+                        </tr>
+                        <tr>
+                            <td class="sticky" colspan="2"><img src="images/Bangladesh.png" alt=""> BAN </td>
+                            <td> 1 </td>
+                            <td> 0 </td>
+                            <td> 1 </td>
+                            <td> 0 </td>
+                            <td> 0 </td>
+                            <td> <strong> 0 </strong> </td>
+                            <td style="color: red;"> <strong> - 0.951 </strong> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
